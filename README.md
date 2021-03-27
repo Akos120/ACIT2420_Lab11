@@ -8,9 +8,10 @@ This is a script and service that will generate a weather report using the wttr.
     1. If you have made a new directory, using your text editor open **wthr.service**
     2. Change the path in ExecStart to match the new path, keeping in mind to keep **/wthr** at the end
     3. The path in WorkingDirectory is where the txt file will be made, you can change this to match the path in ExecStart (without /wthr at the end), or whereever you like
-3. Move the service and timer files, **wthr.service** and **wthr.timer**, to **/etc/systemd/system**
-4. Reload the daemon list with **sudo systemctl daemon-reload**
-5. Enable the timer file (this will also enable your service file) with, **sudo systemctl enable wthr.timer**
+3. Ensure that the wthr script has executable permission. You can change it with, **chmod +x wthr**
+4. Move the service and timer files, **wthr.service** and **wthr.timer**, to **/etc/systemd/system**
+5. Reload the daemon list with **sudo systemctl daemon-reload**
+6. Enable the timer file (this will also enable your service file) with, **sudo systemctl enable wthr.timer**
 
 ## Requirement
 **curl** is used in the script. If you do not have it, please install it with **sudo apt install curl**
