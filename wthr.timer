@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs the weather service hourly
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+
+[Install]
+WantedBy=multi-user.target

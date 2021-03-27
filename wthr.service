@@ -1,0 +1,11 @@
+[Unit]
+Description=Weather app that displays current and next two days forecast
+
+[Service]
+Type=simple
+ExecStart=/home/vagrant/week11/wthr
+WorkingDirectory=/home/vagrant/week11
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
